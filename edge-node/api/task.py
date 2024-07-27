@@ -50,7 +50,8 @@ def send_task():
     scale = 30
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     num_frames_to_capture = int(np.random.exponential(scale))
-    num_frames_to_capture = max(1, min(num_frames_to_capture, total_frames)) 
+    # num_frames_to_capture = max(1, min(num_frames_to_capture, total_frames))
+    num_frames_to_capture = int(np.random.uniform(1, total_frames + 1))
 
     for i in range(num_frames_to_capture):
         ret, frame = cap.read()
