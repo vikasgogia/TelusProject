@@ -8,7 +8,7 @@ headers = {'Content-Type': 'application/json'}
 
 scale = 1 
 
-for j in range(15, 61, 15):
+for j in range(15, 45, 15):
     print("Tasks= ", j)
 
     for i in range(j):
